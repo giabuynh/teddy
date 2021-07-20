@@ -48,6 +48,7 @@ class OrderView(mixins.ListModelMixin, mixins.CreateModelMixin, generics.Generic
                 'parent': sku['id'],
                 'quantity': i['quantity']
             })
+            # move to payment
             product.quantity -= i['quantity']
             product.save()
 
